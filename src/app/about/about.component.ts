@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+declare var $: any;
 
 @Component({
   selector: 'about',
@@ -6,4 +7,9 @@ import {Component} from '@angular/core';
   templateUrl: './about.component.html'
 })
 export class AboutComponent {
+  constructor() {
+    $(document).ready(function() {
+      console.info('Y!');
+    });
+  }
 }
