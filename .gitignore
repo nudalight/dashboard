@@ -1,4 +1,11 @@
+# ide
 .idea/
-/node_modules/
-/dist/
-/npm-debug.log
+
+# deps
+node_modules/
+
+# compiled
+dist/
+
+# logs
+*.log$

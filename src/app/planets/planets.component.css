@@ -1,0 +1,50 @@
+.pillow {
+  height: 3em;
+}
+
+.stats {
+  display: flex;
+  padding: .5em 0;
+}
+
+.stat {
+  padding: .5em;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.label {
+  padding: .5em 0;
+}
+
+.diagram {
+  width: 8em;
+  height: 8em;
+  border-radius: 50%;
+  background: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.success {
+  background-color: #21ba45;
+  color: #fff;
+}
+
+.info {
+  background-color: #2185D0;
+  color: #fff;
+}
+
+.danger {
+  background-color: #DB2828;
+  color: #fff;
+}
+
+.pdt-1 {
+  padding-top: 1em;
+}

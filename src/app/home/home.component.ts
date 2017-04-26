@@ -8,11 +8,6 @@ declare var $: any;
 })
 export class HomeComponent {
   constructor() {
-    $(document).ready(function() {
-      console.info('Y!');
-      // $('.ui.sidebar')
-      //   .sidebar('toggle')
-      // ;
-    });
+
   }
 }
