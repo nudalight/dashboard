@@ -14,19 +14,29 @@ export class AppComponent implements OnInit  {
 
   ngOnInit() {
     this.listenToSidebarClick();
+    $('.menu .item')
+      .tab()
+    ;
   }
 
-  public toggleMenu = () => {
-    console.info('WORKED!');
+  public toggleMenu () {
     $('.ui.sidebar')
       .sidebar('toggle')
     ;
   };
 
-  public listenToSidebarClick = () => {
+  public listenToSidebarClick() {
     const $sidebar = $('.sidebar');
     $sidebar.on('click', () => {
       $sidebar.sidebar('hide');
     });
   }
+
+  public openModal() {
+    $('.ui.modal')
+      .modal('show')
+    ;
+  }
+
+
 }

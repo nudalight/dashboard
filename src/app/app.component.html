@@ -1,6 +1,7 @@
-<style>.brand {
-  padding: 1em;
-}
+<style>
+  .brand {
+    padding: 1em;
+  }
 
 .pusher {
   min-height: 95%;
@@ -23,12 +24,16 @@
     display: block !important;
   }
 }
+
 @media all and (max-width: 768px) {
   .screen-only {
     display: none !important;
   }
 }
+
 </style>
+
+
 
 <div class="ui fixed inverted menu">
   <div class="ui container">
@@ -43,7 +48,7 @@
       <a [routerLink]="['/page1']" class="item screen-only">Page 1</a>
       <a [routerLink]="['/page2']" class="item screen-only">Page 2</a>
       <div class="ui simple dropdown item screen-only">
-        Same menu dropdown
+        Same menu
         <i class="dropdown icon"></i>
         <div class="menu screen-only">
           <a class="item" [routerLink]="['/page1']">Page 1</a>
@@ -58,7 +63,7 @@
             <input type="text" placeholder="Search">
           </div>
         </div>
-        <a class="item">Sign in</a>
+        <a class="item" (click)="openModal()">Sign in</a>
       </div>
 
   </div>
@@ -97,5 +102,69 @@
   </div>
   <a [routerLink]="['/']" class="item">Home</a>
   <a [routerLink]="['/page1']" class="item">Page 1</a>
-  <a [routerLink]="['/page2']"class="item">Page 2</a>
+  <a [routerLink]="['/page2']" class="item">Page 2</a>
+  <a class="item" (click)="openModal()">Sign in</a>
 </div>
+
+
+<!-- auth modal -->
+<div class="ui modal small">
+  <i class="close icon"></i>
+  <div class="header">
+    Auth Modal
+  </div>
+
+  <div class="content">
+
+    <div class="ui top attached tabular menu">
+      <a class="active item" data-tab="first">Login</a>
+      <a class="item" data-tab="second">Register</a>
+    </div>
+    <div class="ui bottom attached active tab segment" data-tab="first">
+      <form class="ui form">
+        <p>Login Form</p>
+        <div class="two column row">
+          <div class="field column">
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="email">
+          </div>
+          <div class="field column">
+            <label>Password:</label>
+            <input type="password" name="password" placeholder="password">
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="ui bottom attached tab segment" data-tab="second">
+      <form class="ui form">
+        <p>Register Form</p>
+        <div class="three column row">
+          <div class="field column">
+            <label>Email:</label>
+            <input type="email" name="email" placeholder="email address">
+          </div>
+          <div class="field column">
+            <label>Password:</label>
+            <input type="password" name="password" placeholder="password">
+          </div>
+          <div class="field column">
+            <label>Confirm Password:</label>
+            <input type="password" name="password" placeholder="confirm password">
+          </div>
+        </div>
+      </form>
+    </div>
+
+  </div>
+
+  <div class="actions">
+    <div class="ui black deny button">
+      Cancel
+    </div>
+    <div class="ui positive right button">
+      Submit
+    </div>
+  </div>
+</div>
+
+
