@@ -2,3 +2,33 @@
   height: 3em;
 }
 
+
+.mobile-only {
+  display: none;
+}
+
+.mobile-only-inline {
+  display: none;
+}
+
+.screen-only-inline {
+  display: inline-block;
+}
+
+@media all and (max-width: 768px) {
+  .mobile-only {
+    display: inline-block !important;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .mobile-only-inline {
+    display: inline-block !important;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .screen-only {
+    display: none !important;
+  }
+}

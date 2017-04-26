@@ -15,55 +15,65 @@
     </div>
   </h3>
 
-  <div class="stats">
-    <div class="stat">
-      <div class="diagram info">455</div>
-      <div class="label">Info data</div>
+  <div class="ui doubling four column grid">
+    <div class="column">
+      <div class="stat">
+        <div class="diagram info">455</div>
+        <div class="label">Info data</div>
+      </div>
     </div>
-    <div class="stat">
-      <div class="diagram">-5%</div>
-      <div class="label">Regular Data</div>
+    <div class="column">
+      <div class="stat">
+        <div class="diagram">-5%</div>
+        <div class="label">Regular Data</div>
+      </div>
     </div>
-    <div class="stat">
-      <div class="diagram danger">-103</div>
-      <div class="label">Danger Data</div>
+    <div class="column">
+      <div class="stat">
+        <div class="diagram danger">-103</div>
+        <div class="label">Danger Data</div>
+      </div>
     </div>
-    <div class="stat">
-      <div class="diagram success">+1328</div>
-      <div class="label">Success Data</div>
+    <div class="column">
+      <div class="stat">
+        <div class="diagram success">+1328</div>
+        <div class="label">Success Data</div>
+      </div>
     </div>
   </div>
 
-  <h3 class="ui header pdt-1">
-    <i class="bullseye icon"></i>
-    <div class="content">
-      First table example
-    </div>
-  </h3>
+  <div *ngIf="planets">
+    <h3 class="ui header pdt-1">
+      <i class="bullseye icon"></i>
+      <div class="content">
+        First table example
+      </div>
+    </h3>
 
 
-  <table class="ui selectable celled table">
-    <thead>
-    <tr>
-      <th>#.</th>
-      <th>Planet Name</th>
-      <th>Rotation Period</th>
-      <th>Orbital Period</th>
-      <th>Climate</th>
-      <th>Population</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr *ngFor='let planet of planets; let i=index;'>
-      <td>{{ i+1 }}</td>
-      <td>{{ planet.name }}</td>
-      <td>{{ planet.rotation_period }}</td>
-      <td>{{ planet.orbital_period }}</td>
-      <td>{{ planet.climate }}</td>
-      <td>{{ planet.population }}</td>
-    </tr>
-    </tbody>
-  </table>
+    <table class="ui selectable celled table">
+      <thead class="screen-only">
+      <tr>
+        <th>#.</th>
+        <th>Planet Name</th>
+        <th>Rotation Period</th>
+        <th>Orbital Period</th>
+        <th>Climate</th>
+        <th>Population</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor='let planet of planets; let i=index;'>
+        <td><b class="mobile-only-inline">#:</b> {{ i+1 }}</td>
+        <td><b class="mobile-only-inline">Planet Name:</b> {{ planet.name }}</td>
+        <td><b class="mobile-only-inline">Rotation period:</b> {{ planet.rotation_period }}</td>
+        <td><b class="mobile-only-inline">Orbital period:</b> {{ planet.orbital_period }}</td>
+        <td><b class="mobile-only-inline">Climate:</b> {{ planet.climate }}</td>
+        <td><b class="mobile-only-inline">Population:</b> {{ planet.population }}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 
   <!-- starships -->
   <div *ngIf="starships">
@@ -75,20 +85,20 @@
     </h3>
 
     <table class="ui selectable celled table">
-      <thead>
-      <tr>
-        <th>#.</th>
-        <th>Starship Name</th>
-        <th>Model</th>
-        <th>Manufacturer</th>
-      </tr>
+      <thead class="screen-only">
+        <tr>
+          <th>#.</th>
+          <th>Starship Name</th>
+          <th>Model</th>
+          <th>Manufacturer</th>
+        </tr>
       </thead>
       <tbody>
       <tr *ngFor='let starship of starships; let i=index;'>
-        <td>{{ i+1 }}</td>
-        <td>{{ starship.name }}</td>
-        <td>{{ starship.model }}</td>
-        <td>{{ starship.manufacturer }}</td>
+        <td><b class="mobile-only-inline">#:</b> {{ i+1 }}</td>
+        <td><b class="mobile-only-inline">Starship name:</b> {{ starship.name }}</td>
+        <td><b class="mobile-only-inline">Model:</b> {{ starship.model }}</td>
+        <td><b class="mobile-only-inline">Manufacturer:</b> {{ starship.manufacturer }}</td>
       </tr>
       </tbody>
     </table>

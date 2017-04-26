@@ -8,23 +8,23 @@
   </h2>
   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet corporis esse inventore maiores pariatur! Ad cupiditate dolorum quasi quis suscipit! Itaque nihil qui reprehenderit sapiente temporibus! Aspernatur fugit perspiciatis tempora!</p>
 
-  <table class="ui selectable celled table">
-    <thead>
-    <tr>
-      <th>Character Name</th>
-      <th>Birth Year</th>
-      <th>Gender</th>
-      <th>Mass</th>
-      <th>Height</th>
-    </tr>
+  <table class="ui selectable celled table" *ngIf="people">
+    <thead class="screen-only">
+      <tr>
+        <th>Character Name</th>
+        <th>Birth Year</th>
+        <th>Gender</th>
+        <th>Mass</th>
+        <th>Height</th>
+      </tr>
     </thead>
     <tbody>
     <tr *ngFor='let person of people'>
-      <td>{{ person.name }}</td>
-      <td>{{ person.birth_year }}</td>
-      <td>{{ person.gender }}</td>
-      <td>{{ person.mass }}</td>
-      <td>{{ person.height }}</td>
+      <td><b class="mobile-only-inline">Name:</b> {{ person.name }}</td>
+      <td><b class="mobile-only-inline">Birth Year:</b> {{ person.birth_year }}</td>
+      <td><b class="mobile-only-inline">Genger:</b> {{ person.gender }}</td>
+      <td><b class="mobile-only-inline">Mass:</b> {{ person.mass }}</td>
+      <td><b class="mobile-only-inline">Height:</b> {{ person.height }}</td>
     </tr>
     </tbody>
   </table>
